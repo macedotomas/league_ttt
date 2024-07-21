@@ -1,0 +1,51 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --cell-size: 100px;
+  --mark-size: calc(var(--cell-size) * .9);
+  --logo-size: calc(var(--cell-size) * 1.5);
+}
+
+body {
+  margin: 0;
+}
+
+.board {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(4, auto); /* Updated from 3 to 4 */
+}
+
+.cell {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.logo {
+
+}
+
+
+#cell-0{
+  background-image: url(/public/logos/league_of_legends.png); /* Update with the actual path to your logo */
+  background-size: var(--logo-size); /* Use the --mark-size variable to control the size */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#side-cell{
+  /*background-color: black;*/
+}
